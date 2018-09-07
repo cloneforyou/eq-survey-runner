@@ -10,7 +10,6 @@ from ua_parser import user_agent_parser
 from app.authentication.no_token_exception import NoTokenException
 from app.globals import get_metadata
 from app.libs.utils import convert_tx_id_for_boxes
-from app.settings import ACCOUNT_URL
 from app.submitter.submission_failed import SubmissionFailedException
 from app.templating.template_renderer import TemplateRenderer
 
@@ -77,6 +76,7 @@ def _render_error_page(status_code):
     return render_theme_template('default', 'errors/error.html',
                                  status_code=status_code,
                                  analytics_ua_id=current_app.config['EQ_UA_ID'],
+                                 respondent_account_url=get_account_url(),
                                  ua=user_agent, tx_id=tx_id), status_code
 
 
@@ -89,10 +89,9 @@ def get_tx_id():
 
 
 def get_account_url():
-    account_url = current_app.config['RESPONDENT_ACCOUNT_URL']
-    if ACCOUNT_URL in cookie_session:
-        account_url = cookie_session[ACCOUNT_URL]
-    return account_url
+    if cookie_session.get('account_url'):
+        return cookie_session['account_url']
+    return current_app.config['RESPONDENT_ACCOUNT_URL']
 
 
 def render_template(template_name):

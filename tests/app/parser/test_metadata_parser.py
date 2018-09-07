@@ -26,7 +26,7 @@ class TestMetadataParser(SurveyRunnerTestCase):  # pylint: disable=too-many-publ
             'return_by': '2016-07-07',
             'case_id': '1234567890',
             'case_ref': '1000000000000001',
-            'account_service_url': 'https://ras.ons.gov.uk'
+            'account_url': 'https://ras.ons.gov.uk'
         }
 
         self.schema_metadata = [
@@ -87,9 +87,9 @@ class TestMetadataParser(SurveyRunnerTestCase):  # pylint: disable=too-many-publ
         with self.application.test_request_context():
             self.assertEqual(self.metadata.get('case_ref'), self.metadata['case_ref'])
 
-    def test_account_service_url(self):
+    def test_account_url(self):
         with self.application.test_request_context():
-            self.assertEqual(self.metadata.get('account_service_url'), self.metadata['account_service_url'])
+            self.assertEqual(self.metadata.get('account_url'), self.metadata['account_url'])
 
     def test_is_valid(self):
         with self.application.test_request_context():

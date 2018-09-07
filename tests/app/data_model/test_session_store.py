@@ -193,7 +193,7 @@ class SessionStoreTest(AppContextTestCase):
                          ru_ref,
                          case_id,
                          case_ref=None,
-                         account_service_url=None,
+                         account_url=None,
                          submitted_time=None,
                          **_):
                 self.tx_id = tx_id
@@ -207,7 +207,7 @@ class SessionStoreTest(AppContextTestCase):
                 self.submitted_time = submitted_time
                 self.case_id = case_id
                 self.case_ref = case_ref
-                self.account_service_url = account_service_url
+                self.account_url = account_url
 
         def old_json_loader(raw, object_hook):  # pylint: disable=unused-argument
             """replacement for json.loads to decode to old format ( no trading as) """
