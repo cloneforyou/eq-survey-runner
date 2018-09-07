@@ -1,6 +1,8 @@
 {
     "data_version": "0.0.1",
     "description": "Quarterly Business Survey",
+    "eq_id": "2",
+    "form_type": "0001",
     "view_submitted_response": {
         "enabled": true,
         "duration": 900

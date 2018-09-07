@@ -29,9 +29,6 @@
         "name": "ref_p_end_date",
         "validator": "date"
     }, {
-        "name": "employment_date",
-        "validator": "date"
-    }, {
         "name": "trad_as_or_ru_name",
         "validator": "string"
     }],
@@ -229,7 +226,7 @@
                         "mandatory": true
                     }],
                     "id": "confirm-turnover-question",
-                    "title": "For the period {{ format_conditional_date (answers['period-from'], metadata['ref_p_start_date'])}} to {{ format_conditional_date (answers['period-to'], metadata['ref_p_end_date'])}}, the value of the total turnover was <em>{{format_currency(answers['turnover-answer'])}}</em>, is this correct?"
+                    "title": "For the period {{ format_conditional_date (answers['period-from'], metadata['ref_p_start_date'])}} to {{ format_conditional_date (answers['period-to'], metadata['ref_p_end_date'])}}, the value of the total turnover was <em>{{answers['turnover-answer']|format_currency}}</em>, is this correct?"
                 }],
                 "routing_rules": [{
                     "goto": {
@@ -267,7 +264,7 @@
                         }]
                     },
                     "id": "number-of-employees-total-question",
-                    "title": "On {{metadata['employment_date']|format_date}}, what was the number of employees for {{metadata['trad_as_or_ru_name']}}?",
+                    "title": "On {{'2018-09-07'|format_date}}, what was the number of employees for {{metadata['trad_as_or_ru_name']}}?",
                     "type": "General"
                 }],
                 "title": "Employees",
@@ -299,7 +296,7 @@
                         "mandatory": true
                     }],
                     "id": "confirm-zero-employees-question",
-                    "title": "On {{metadata['employment_date']|format_date}}, the number of employees for {{metadata['trad_as_or_ru_name']}} was <em>0</em>, is this correct?"
+                    "title": "On {{'2018-09-07'|format_date}}, the number of employees for {{metadata['trad_as_or_ru_name']}} was <em>0</em>, is this correct?"
                 }],
                 "routing_rules": [{
                     "goto": {
@@ -378,7 +375,7 @@
                         }]
                     },
                     "id": "number-of-employees-split-question",
-                    "title": "Of the <em>{{answers['number-of-employees-total']}}</em> total employees employed on {{metadata['employment_date']|format_date}}, how many male and female employees worked the following hours?",
+                    "title": "Of the <em>{{answers['number-of-employees-total']}}</em> total employees employed on {{'2018-09-07'|format_date}}, how many male and female employees worked the following hours?",
                     "type": "Calculated"
                 }]
             }, {
