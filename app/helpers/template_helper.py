@@ -80,9 +80,7 @@ def with_legal_basis(func):
 
 def get_account_url():
     metadata = get_metadata(current_user)
-    if metadata.get('account_url'):
-        return metadata['account_url']
-    return current_app.config['RESPONDENT_ACCOUNT_URL']
+    return metadata.get('account_url', current_app.config['RESPONDENT_ACCOUNT_URL'])
 
 
 def render_template(template, **kwargs):
