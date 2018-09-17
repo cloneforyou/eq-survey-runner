@@ -20,7 +20,7 @@ class TestErrors(IntegrationTestCase):
         'employment_date': '1983-06-02',
         'region_code': 'GB-ENG',
         'language_code': 'en',
-        'account_url': 'http://correct.place',
+        'account_service_url': 'http://correct.place',
         'roles': []
     }
 
@@ -40,7 +40,7 @@ class TestErrors(IntegrationTestCase):
             self.assertStatusNotFound()
             self.assertInPage('Error 404')
 
-            # Test that my account link uses account_url that's passed in via the payload
+            # Test that my account link uses account_service_url that's passed in via the payload
             self.assertInPage('My account')
             self.assertInPage('href="http://correct.place"')
 
@@ -71,6 +71,6 @@ class TestErrors(IntegrationTestCase):
                 self.assertStatusCode(500)
                 self.assertInPage('500')
 
-                # Test that my account link uses account_url that's passed in via the payload
+                # Test that my account link uses account_service_url that's passed in via the payload
                 self.assertInPage('My account')
                 self.assertInPage('href="http://correct.place"')

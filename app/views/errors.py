@@ -89,7 +89,7 @@ def get_tx_id():
 
 
 def get_account_url():
-    return cookie_session.get('account_url', current_app.config['RESPONDENT_ACCOUNT_URL'])
+    return cookie_session.get('account_service_url', current_app.config['RESPONDENT_ACCOUNT_URL'])
 
 
 def render_template(template_name):

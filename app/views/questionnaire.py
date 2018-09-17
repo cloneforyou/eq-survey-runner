@@ -343,9 +343,7 @@ def get_view_submission(schema, eq_id, form_type):  # pylint: disable=unused-arg
 
 
 def _get_account_url(metadata_context):
-    if metadata_context.get('account_url'):
-        return metadata_context['account_url']
-    return current_app.config['RESPONDENT_ACCOUNT_URL']
+    return metadata_context.get('account_service_url', current_app.config['RESPONDENT_ACCOUNT_URL'])
 
 
 def _set_started_at_metadata_if_required(form, collection_metadata):
@@ -493,7 +491,7 @@ def _save_sign_out(routing_path, current_location, form, schema, answer_store, m
 
         logout_user()
 
-        return redirect(url_for('session.get_sign_out', account_url=metadata.get('account_url')))
+        return redirect(url_for('session.get_sign_out', account_service_url=metadata.get('account_service_url')))
 
     context = _get_context(routing_path, block, current_location, schema, form)
     return _render_page(block['type'], context, current_location, schema, answer_store, metadata, routing_path)

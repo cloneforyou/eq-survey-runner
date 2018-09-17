@@ -70,8 +70,8 @@ def login():
     cookie_session['theme'] = g.schema.json['theme']
     cookie_session['survey_title'] = g.schema.json['title']
 
-    if 'account_url' in claims and claims.get('account_url'):
-        cookie_session['account_url'] = claims.get('account_url')
+    if 'account_service_url' in claims and claims.get('account_service_url'):
+        cookie_session['account_service_url'] = claims.get('account_service_url')
 
     routing_path = path_finder.get_full_routing_path()
     completeness = get_completeness(current_user)
@@ -129,6 +129,4 @@ def get_sign_out():
 
 
 def get_account_url():
-    if request.args.get('account_url'):
-        return request.args.get('account_url')
-    return current_app.config['RESPONDENT_ACCOUNT_URL']
+    return request.args.get('account_service_url', current_app.config['RESPONDENT_ACCOUNT_URL'])

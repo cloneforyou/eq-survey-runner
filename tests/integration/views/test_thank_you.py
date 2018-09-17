@@ -114,7 +114,7 @@ class TestThankYou(IntegrationTestCase):
 
     def test_thank_you_page_my_account_link_uses_url_from_payload(self):
         account_url_supplied = self.example_payload.copy()
-        account_url_supplied['account_url'] = 'http://correct.place'
+        account_url_supplied['account_service_url'] = 'http://correct.place'
 
         with patch('tests.integration.create_token.PAYLOAD', account_url_supplied):
             self.launchSurvey('test', 'currency')
