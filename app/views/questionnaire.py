@@ -280,7 +280,7 @@ def get_thank_you(schema, metadata, eq_id, form_type):
                                      survey_title=TemplateRenderer.safe_content(schema.json['title']),
                                      is_view_submitted_response_enabled=is_view_submitted_response_enabled(schema.json),
                                      view_submission_url=view_submission_url,
-                                     respondent_account_url=_get_account_url(metadata_context),
+                                     respondent_account_url=metadata_context.get('account_service_url'),
                                      view_submission_duration=view_submission_duration)
 
     routing_path = path_finder.get_full_routing_path()
@@ -340,12 +340,6 @@ def get_view_submission(schema, eq_id, form_type):  # pylint: disable=unused-arg
                                          content=context)
 
     return redirect(url_for('post_submission.get_thank_you', eq_id=eq_id, form_type=form_type))
-
-
-def _get_account_url(metadata_context):
-    if metadata_context.get('account_url'):
-        return metadata_context['account_url']
-    return current_app.config['RESPONDENT_ACCOUNT_URL']
 
 
 def _set_started_at_metadata_if_required(form, collection_metadata):
@@ -493,7 +487,7 @@ def _save_sign_out(routing_path, current_location, form, schema, answer_store, m
 
         logout_user()
 
-        return redirect(url_for('session.get_sign_out', account_url=metadata.get('account_url')))
+        return redirect(url_for('session.get_sign_out', account_service_url=metadata.get('account_url')))
 
     context = _get_context(routing_path, block, current_location, schema, form)
     return _render_page(block['type'], context, current_location, schema, answer_store, metadata, routing_path)
