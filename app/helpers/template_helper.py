@@ -78,11 +78,6 @@ def with_legal_basis(func):
     return legal_basis_wrapper
 
 
-def get_account_url():
-    metadata = get_metadata(current_user)
-    return metadata.get('account_service_url', current_app.config['RESPONDENT_ACCOUNT_URL'])
-
-
 def render_template(template, **kwargs):
     theme = g.schema.json.get('theme')
     template = '{}.html'.format(template).lower()
@@ -91,7 +86,7 @@ def render_template(template, **kwargs):
         theme,
         template,
         survey_title=TemplateRenderer.safe_content(g.schema.json['title']),
-        respondent_account_url=get_account_url(),
+        respondent_account_url=get_metadata(current_user).get('account_service_url'),
         survey_id=g.schema.json['survey_id'],
         **kwargs
     )

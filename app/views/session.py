@@ -15,6 +15,7 @@ from app.authentication.jti_claim_storage import JtiTokenUsed, use_jti_claim
 from app.globals import get_completeness
 from app.helpers.path_finder_helper import path_finder
 from app.questionnaire.router import Router
+from app.settings import ACCOUNT_URL
 from app.storage.metadata_parser import validate_metadata, parse_runner_claims
 from app.utilities.schema import load_schema_from_metadata
 from app.views.errors import render_template
@@ -71,7 +72,7 @@ def login():
     cookie_session['survey_title'] = g.schema.json['title']
 
     if 'account_service_url' in claims and claims.get('account_service_url'):
-        cookie_session['account_service_url'] = claims.get('account_service_url')
+        cookie_session[ACCOUNT_URL] = claims.get('account_service_url')
 
     routing_path = path_finder.get_full_routing_path()
     completeness = get_completeness(current_user)
@@ -124,9 +125,5 @@ def get_sign_out():
     return render_theme_template(cookie_session.get('theme', 'default'),
                                  template_name='signed-out.html',
                                  analytics_ua_id=current_app.config['EQ_UA_ID'],
-                                 respondent_account_url=get_account_url(),
+                                 respondent_account_url=request.args.get('account_service_url'),
                                  survey_title=TemplateRenderer.safe_content(cookie_session.get('survey_title', '')))
-
-
-def get_account_url():
-    return request.args.get('account_service_url', current_app.config['RESPONDENT_ACCOUNT_URL'])
