@@ -18,7 +18,7 @@ class TestErrors(IntegrationTestCase):
         'employment_date': '1983-06-02',
         'region_code': 'GB-ENG',
         'language_code': 'en',
-        'account_url': 'http://correct.place',
+        'account_service_url': 'http://correct.place',
         'roles': []
     }
 

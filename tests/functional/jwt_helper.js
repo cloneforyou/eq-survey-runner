@@ -49,7 +49,7 @@ module.exports = function generateToken(schema, userId, collectionId, periodId =
     region_code: regionCode,
     language_code: languageCode,
     sexual_identity: sexualIdentity,
-    account_url: 'http://localhost:8000'
+    account_service_url: 'http://localhost:8000'
   };
 
   // Sign JWT, password=616161

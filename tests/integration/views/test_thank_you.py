@@ -113,10 +113,10 @@ class TestThankYou(IntegrationTestCase):
             self.assertNotInPage('(<span class="trad_as"></span>)')
 
     def test_thank_you_page_my_account_link_uses_url_from_payload(self):
-        account_url_supplied = self.example_payload.copy()
-        account_url_supplied['account_url'] = 'http://correct.place'
+        account_service_url_supplied = self.example_payload.copy()
+        account_service_url_supplied['account_service_url'] = 'http://correct.place'
 
-        with patch('tests.integration.create_token.PAYLOAD', account_url_supplied):
+        with patch('tests.integration.create_token.PAYLOAD', account_service_url_supplied):
             self.launchSurvey('test', 'currency')
 
             # check we're on first page

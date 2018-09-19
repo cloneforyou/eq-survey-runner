@@ -487,7 +487,7 @@ def _save_sign_out(routing_path, current_location, form, schema, answer_store, m
 
         logout_user()
 
-        return redirect(url_for('session.get_sign_out', account_service_url=metadata.get('account_url')))
+        return redirect(url_for('session.get_sign_out'))
 
     context = _get_context(routing_path, block, current_location, schema, form)
     return _render_page(block['type'], context, current_location, schema, answer_store, metadata, routing_path)

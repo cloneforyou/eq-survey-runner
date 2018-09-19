@@ -70,8 +70,8 @@ def login():
     cookie_session['theme'] = g.schema.json['theme']
     cookie_session['survey_title'] = g.schema.json['title']
 
-    if 'account_url' in claims:
-        cookie_session['account_url'] = claims.get('account_url')
+    if 'account_service_url' in claims:
+        cookie_session['account_service_url'] = claims.get('account_service_url')
 
     routing_path = path_finder.get_full_routing_path()
     completeness = get_completeness(current_user)
@@ -124,5 +124,5 @@ def get_sign_out():
     return render_theme_template(cookie_session.get('theme', 'default'),
                                  template_name='signed-out.html',
                                  analytics_ua_id=current_app.config['EQ_UA_ID'],
-                                 account_service_url=cookie_session.get('account_url'),
+                                 account_service_url=cookie_session.get('account_service_url'),
                                  survey_title=TemplateRenderer.safe_content(cookie_session.get('survey_title', '')))
