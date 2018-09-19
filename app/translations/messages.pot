@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-09-13 10:45+0100\n"
+"POT-Creation-Date: 2018-09-19 13:50+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -303,7 +303,7 @@ msgstr ""
 msgid "How can we improve this survey"
 msgstr ""
 
-#: app/templates/partials/answers/textarea.html:31
+#: app/templates/partials/answers/textarea.html:32
 #: app/templates/partials/feedback_form.html:7
 msgid "Characters remaining"
 msgstr ""
@@ -377,7 +377,7 @@ msgstr ""
 msgid "News"
 msgstr ""
 
-#: app/templates/partials/header.html:18
+#: app/templates/partials/header.html:19
 msgid "My account"
 msgstr ""
 
@@ -507,11 +507,11 @@ msgid "Select all that apply"
 msgstr ""
 
 #: app/templates/partials/widgets/multiple_choice_widget.html:20
-#: app/templates/partials/widgets/multiple_choice_widget.html:55
+#: app/templates/partials/widgets/multiple_choice_widget.html:51
 msgid "Or"
 msgstr ""
 
-#: app/templates/partials/widgets/multiple_choice_widget.html:55
+#: app/templates/partials/widgets/multiple_choice_widget.html:51
 msgid "Selecting this will uncheck all other checkboxes"
 msgstr ""
 
