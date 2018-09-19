@@ -1,6 +1,5 @@
 from unittest.mock import patch
 
-from app.settings import RESPONDENT_ACCOUNT_URL
 from tests.integration.integration_test_case import IntegrationTestCase
 
 
@@ -30,7 +29,7 @@ class TestErrors(IntegrationTestCase):
 
         # Test that my account link does not show
         self.assertNotInPage('My account')
-        self.assertNotInPage(RESPONDENT_ACCOUNT_URL)
+        self.assertNotInPage('http://correct.place')
 
     def test_errors_404_with_payload(self):
         with patch('tests.integration.create_token.PAYLOAD', self.example_payload):
@@ -54,9 +53,9 @@ class TestErrors(IntegrationTestCase):
             self.assertStatusCode(500)
             self.assertInPage('500')
 
-            # Test that my account link does not show
+            # Test that my account link doesn't show as it wasn't passed in via the payload.
             self.assertNotInPage('My account')
-            self.assertNotInPage(RESPONDENT_ACCOUNT_URL)
+            self.assertNotInPage('href="http://correct.place"')
 
     def test_errors_500_with_payload(self):
         # Given
