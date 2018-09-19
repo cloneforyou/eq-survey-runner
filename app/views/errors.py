@@ -76,7 +76,7 @@ def _render_error_page(status_code):
     return render_theme_template('default', 'errors/error.html',
                                  status_code=status_code,
                                  analytics_ua_id=current_app.config['EQ_UA_ID'],
-                                 respondent_account_url=cookie_session.get('account_url'),
+                                 account_service_url=cookie_session.get('account_url'),
                                  ua=user_agent, tx_id=tx_id), status_code
 
 
@@ -97,5 +97,5 @@ def render_template(template_name):
                                  analytics_ua_id=current_app.config['EQ_UA_ID'],
                                  ua=user_agent,
                                  tx_id=tx_id,
-                                 respondent_account_url=cookie_session.get('account_service_url'),
+                                 account_service_url=cookie_session.get('account_service_url'),
                                  survey_title=TemplateRenderer.safe_content(cookie_session.get('survey_title', '')))

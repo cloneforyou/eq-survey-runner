@@ -7,7 +7,7 @@ const ThankYouPage = require('../pages/thank-you.page');
 
 describe('Introduction page', function() {
 
-  it('@watch Given I start a survey, When I go through every page then I should see the "My account" button on each page', function() {
+  it('Given I start a survey, When I go through every page then I should see the "My account" button on each page', function() {
     return helpers.openQuestionnaire('test_introduction.json').then(() => {
       return browser
         .getUrl().should.eventually.contain('introduction')

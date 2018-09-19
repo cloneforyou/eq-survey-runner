@@ -280,7 +280,7 @@ def get_thank_you(schema, metadata, eq_id, form_type):
                                      survey_title=TemplateRenderer.safe_content(schema.json['title']),
                                      is_view_submitted_response_enabled=is_view_submitted_response_enabled(schema.json),
                                      view_submission_url=view_submission_url,
-                                     respondent_account_url=metadata_context.get('account_service_url'),
+                                     account_service_url=metadata_context.get('account_service_url'),
                                      view_submission_duration=view_submission_duration)
 
     routing_path = path_finder.get_full_routing_path()
