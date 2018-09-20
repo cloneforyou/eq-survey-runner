@@ -19,7 +19,7 @@ describe('Introduction page', function() {
         .getUrl().should.eventually.contain('confirmation')
         .getText(SummaryPage.myAccountLink()).should.eventually.contain('My account')
         .click(SummaryPage.submit())
-        .getUrl().should.eventually.contain(ThankYouPage.pageName)
+        .getUrl().should.eventually.contain('thank-you')
         .getText(ThankYouPage.myAccountLink()).should.eventually.contain('My account');
     });
   });

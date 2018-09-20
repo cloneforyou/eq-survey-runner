@@ -86,7 +86,7 @@ def render_template(template, **kwargs):
         theme,
         template,
         survey_title=TemplateRenderer.safe_content(g.schema.json['title']),
-        respondent_account_url=get_metadata(current_user).get('account_service_url'),
+        account_service_url=get_metadata(current_user).get('account_service_url'),
         survey_id=g.schema.json['survey_id'],
         **kwargs
     )

@@ -87,7 +87,7 @@ class TestMetadataParser(SurveyRunnerTestCase):  # pylint: disable=too-many-publ
         with self.application.test_request_context():
             self.assertEqual(self.metadata.get('case_ref'), self.metadata['case_ref'])
 
-    def test_account_url(self):
+    def test_account_service_url(self):
         with self.application.test_request_context():
             self.assertEqual(self.metadata.get('account_service_url'), self.metadata['account_service_url'])
 
