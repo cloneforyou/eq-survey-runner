@@ -13,17 +13,11 @@
                 {% endblock logo %}
                 </div>
                 {% if account_service_url %}
-                    <div class="grid__col col-6@s">
-                        <nav class="nav nav--horizontal  u-d-no--@xs@s u-fr" aria-label="Site services menu">
-                            <ul class="nav__list" role="menubar" aria-label="Site services menu">
-                                <li class="nav__item" role="menuitem"><a href="{{account_service_url}}" id="my-account" class="nav__link">{{ _("My account") }}</a></li>
-                            </ul>
-                        </nav>
-                    </div>
+                    {% include 'partials/services-navigation.html' %}
                 {% endif %}
             </div>
         </div>
-    </div>
+    </div>  
     <div class="header__main">
         <div class="container">
             <div class="grid grid--gutterless grid--align-mid u-cf">
@@ -31,20 +25,12 @@
                     <h1 class="header__title ">{{ survey_title }}</h1>
                 </div>
                 {% if account_service_url %}
-                <button class="btn btn--mobile js-nav-btn u-fr u-d-no--@s" type="button" id="menu-btn" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle main navigation" aria-haspopup="true"><span class="btn--mobile__label"></span></button>
+                    {% include 'partials/mobile-navigation-button.html' %}                
                 {% endif %}
             </div>
         </div>
     </div>
     {% if account_service_url %}
-    <div class="header__nav">
-        <div class="container">
-            <nav class="nav nav--horizontal nav--light nav--main nav--h-m js-main-nav" aria-label="Main menu" id="main-nav">
-                <ul class="nav__list" aria-label="Navigation menu" role="menubar">
-                    <li class="nav__item u-d-no--@s" role="menuitem"><a href="{{account_service_url}}" id="my-account" class="nav__link">{{ _("My account") }}</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
+        {% include 'partials/main-navigation.html' %}
     {% endif %}
 </header>
