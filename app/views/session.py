@@ -15,7 +15,6 @@ from app.authentication.jti_claim_storage import JtiTokenUsed, use_jti_claim
 from app.globals import get_completeness
 from app.helpers.path_finder_helper import path_finder
 from app.questionnaire.router import Router
-from app.settings import ACCOUNT_URL
 from app.storage.metadata_parser import validate_metadata, parse_runner_claims
 from app.utilities.schema import load_schema_from_metadata
 from app.views.errors import render_template
