@@ -23,19 +23,19 @@
         "validator": "string"
     }, {
         "name": "address_line1",
-        "validator": "string"
+        "validator": "optional_string"
     }, {
         "name": "address_line2",
-        "validator": "string"
+        "validator": "optional_string"
     }, {
         "name": "locality",
-        "validator": "string"
+        "validator": "optional_string"
     }, {
         "name": "town_name",
-        "validator": "string"
+        "validator": "optional_string"
     }, {
         "name": "postcode",
-        "validator": "string"
+        "validator": "optional_string"
     }],
     "sections": [{
         "id": "address-section",
