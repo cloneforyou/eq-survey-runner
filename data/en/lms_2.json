@@ -56,57 +56,60 @@
                     "id": "primary-household-member-group",
                     "title": "Your Details",
                     "blocks": [{
-                            "type": "Question",
-                            "id": "primary-household-member-block",
-                            "questions": [{
-                                "description": "",
-                                "id": "primary-household-member-question",
-                                "title": "What is your name?",
-                                "type": "General",
-                                "answers": [{
-                                        "id": "primary-household-member-first-name",
-                                        "description": "",
-                                        "label": "My first or given name",
-                                        "mandatory": true,
-                                        "type": "TextField"
+                        "type": "Question",
+                        "id": "primary-household-member-block",
+                        "questions": [{
+                            "description": "",
+                            "id": "primary-household-member-question",
+                            "title": "What is your name?",
+                            "type": "General",
+                            "answers": [{
+                                    "id": "primary-household-member-first-name",
+                                    "description": "",
+                                    "label": "My first or given name",
+                                    "mandatory": true,
+                                    "type": "TextField"
+                                },
+                                {
+                                    "id": "primary-household-member-last-name",
+                                    "description": "",
+                                    "label": "My surname or family name",
+                                    "mandatory": true,
+                                    "type": "TextField"
+                                }
+                            ]
+                        }]
+                    }]
+                },
+                {
+                    "id": "primary-household-member-address-group",
+                    "title": "Your Details",
+                    "blocks": [{
+                        "type": "Question",
+                        "id": "address-check-block",
+                        "questions": [{
+                            "id": "address-check-question",
+                            "title": "Is this address your main residence?",
+                            "description": "",
+                            "type": "General",
+                            "answers": [{
+                                "id": "primary-household-member-address-check-answer",
+                                "mandatory": true,
+                                "options": [{
+                                        "label": "Yes",
+                                        "value": "Yes",
+                                        "description": "This is my main residence"
                                     },
                                     {
-                                        "id": "primary-household-member-last-name",
-                                        "description": "",
-                                        "label": "My surname or family name",
-                                        "mandatory": true,
-                                        "type": "TextField"
+                                        "label": "No",
+                                        "value": "No",
+                                        "description": "This address is not my main residence. For example it is my old address, second home, holiday home, business address or is not familiar to me"
                                     }
-                                ]
+                                ],
+                                "type": "Radio"
                             }]
-                        },
-                        {
-                            "type": "Question",
-                            "id": "address-check-block",
-                            "questions": [{
-                                "id": "address-check-question",
-                                "title": "Is this address your main residence?",
-                                "description": "{{ format_address_list ([metadata['address_line1'], metadata['address_line2'], metadata['locality'], metadata['town_name'], metadata['postcode']]) }}",
-                                "type": "General",
-                                "answers": [{
-                                    "id": "primary-household-member-address-check-answer",
-                                    "mandatory": true,
-                                    "options": [{
-                                            "label": "Yes",
-                                            "value": "Yes",
-                                            "description": "This is my main residence"
-                                        },
-                                        {
-                                            "label": "No",
-                                            "value": "No",
-                                            "description": "This address is not my main residence. For example it is my old address, second home, holiday home, business address or is not familiar to me"
-                                        }
-                                    ],
-                                    "type": "Radio"
-                                }]
-                            }]
-                        }
-                    ]
+                        }]
+                    }]
                 },
 
                 {
@@ -258,71 +261,6 @@
                                     "condition": "equals",
                                     "value": "No"
                                 }]
-                            }]
-                        }
-                    ]
-                },
-                {
-                    "id": "share-group",
-                    "title": "",
-                    "skip_conditions": [{
-                        "when": [{
-                            "id": "primary-household-member-address-check-answer",
-                            "condition": "equals",
-                            "value": "No"
-                        }]
-                    }],
-                    "blocks": [{
-                            "type": "Question",
-                            "id": "share-cooking-block",
-                            "questions": [{
-                                "id": "share-cooking-question",
-                                "title": "Do all of these people share cooking facilities?",
-                                "description": "{{ [[answers['primary-household-member-first-name'], answers['primary-household-member-last-name']], [answers['other-household-member-first-name'], answers['other-household-member-last-name']], [answers['student-household-member-first-name'], answers['student-household-member-last-name']]] | format_repeating_summary }}",
-                                "type": "General",
-                                "answers": [{
-                                    "id": "share-cooking-answer",
-                                    "mandatory": false,
-                                    "options": [{
-                                            "label": "Yes",
-                                            "value": "Yes"
-                                        },
-                                        {
-                                            "label": "No",
-                                            "value": "No"
-                                        }
-                                    ],
-                                    "type": "Radio"
-                                }]
-                            }]
-                        },
-                        {
-                            "type": "Question",
-                            "id": "share-living-block",
-                            "questions": [{
-                                "id": "share-living-question",
-                                "title": "Do all of these people share a living room or dining room?",
-                                "description": "{{ [[answers['primary-household-member-first-name'], answers['primary-household-member-last-name']], [answers['other-household-member-first-name'], answers['other-household-member-last-name']], [answers['student-household-member-first-name'], answers['student-household-member-last-name']]] | format_repeating_summary }}",
-                                "type": "General",
-                                "answers": [{
-                                    "id": "share-living-answer",
-                                    "mandatory": false,
-                                    "options": [{
-                                            "label": "Yes",
-                                            "value": "Yes"
-                                        },
-                                        {
-                                            "label": "No",
-                                            "value": "No"
-                                        }
-                                    ],
-                                    "type": "Radio"
-                                }]
-                            }],
-                            "routing_rules": [{
-                                "goto": {
-                                    "group": "household-relationships-group"
-                                }
                             }]
                         }
                     ]
@@ -590,6 +528,118 @@
                                     "id": "student-household-member-anyone-else-no-primary",
                                     "condition": "equals",
                                     "value": "No"
+                                }]
+                            }]
+                        }
+                    ]
+                },
+                {
+                    "id": "household-summary-group-no-primary",
+                    "title": "",
+                    "skip_conditions": [{
+                        "when": [{
+                            "id": "primary-household-member-address-check-answer",
+                            "condition": "equals",
+                            "value": "Yes"
+                        }]
+                    }],
+                    "blocks": [{
+                        "type": "AnswerSummary",
+                        "id": "household-summary-no-primary",
+                        "title": "People who live here",
+                        "label": "Household members",
+                        "icon": "person",
+                        "answer_ids": [
+                            "other-household-member-first-name-no-primary",
+                            "student-household-member-first-name-no-primary"
+                        ],
+                        "answer_label": "[answers['other-household-member-first-name-no-primary'], answers['other-household-member-last-name-no-primary'], answers['student-household-member-first-name-no-primary'], answers['student-household-member-last-name-no-primary']] | format_household_name"
+                    }]
+                },
+                {
+                    "id": "household-summary-group",
+                    "title": "",
+                    "skip_conditions": [{
+                        "when": [{
+                            "id": "primary-household-member-address-check-answer",
+                            "condition": "equals",
+                            "value": "No"
+                        }]
+                    }],
+                    "blocks": [{
+                        "type": "AnswerSummary",
+                        "id": "household-summary",
+                        "title": "People who live here",
+                        "label": "Household members",
+                        "icon": "person",
+                        "answer_ids": [
+                            "primary-household-member-first-name",
+                            "other-household-member-first-name",
+                            "student-household-member-first-name"
+                        ],
+                        "answer_label": "[answers['primary-household-member-first-name'], answers['primary-household-member-last-name'], answers['other-household-member-first-name'], answers['other-household-member-last-name'], answers['student-household-member-first-name'], answers['student-household-member-last-name']] | format_household_name"
+                    }]
+                }
+            ]
+        },
+        {
+            "id": "household-section-share",
+            "title": "About Shared Facilities",
+            "groups": [{
+                    "id": "share-group",
+                    "title": "",
+                    "skip_conditions": [{
+                        "when": [{
+                            "id": "primary-household-member-address-check-answer",
+                            "condition": "equals",
+                            "value": "No"
+                        }]
+                    }],
+                    "blocks": [{
+                            "type": "Question",
+                            "id": "share-cooking-block",
+                            "questions": [{
+                                "id": "share-cooking-question",
+                                "title": "Do all of these people share cooking facilities?",
+                                "description": "{{ [[answers['primary-household-member-first-name'], answers['primary-household-member-last-name']], [answers['other-household-member-first-name'], answers['other-household-member-last-name']], [answers['student-household-member-first-name'], answers['student-household-member-last-name']]] | format_repeating_summary }}",
+                                "type": "General",
+                                "answers": [{
+                                    "id": "share-cooking-answer",
+                                    "mandatory": false,
+                                    "options": [{
+                                            "label": "Yes",
+                                            "value": "Yes"
+                                        },
+                                        {
+                                            "label": "No",
+                                            "value": "No"
+                                        }
+                                    ],
+                                    "type": "Radio"
+                                }]
+                            }]
+                        },
+                        {
+                            "type": "Question",
+                            "id": "share-living-block",
+                            "questions": [{
+                                "id": "share-living-question",
+                                "title": "Do all of these people share a living room or dining room?",
+                                "description": "{{ [[answers['primary-household-member-first-name'], answers['primary-household-member-last-name']], [answers['other-household-member-first-name'], answers['other-household-member-last-name']], [answers['student-household-member-first-name'], answers['student-household-member-last-name']]] | format_repeating_summary }}",
+                                "type": "General",
+                                "answers": [{
+                                    "id": "share-living-answer",
+                                    "mandatory": false,
+                                    "options": [{
+                                            "label": "Yes",
+                                            "value": "Yes"
+                                        },
+                                        {
+                                            "label": "No",
+                                            "value": "No"
+                                        }
+                                    ],
+                                    "type": "Radio"
                                 }]
                             }]
                         }
@@ -3991,27 +4041,31 @@
                                 "goto": {
                                     "block": "two-jobs-j1-usual-hours-w12-1",
                                     "when": [{
-                                        "id": "second-job-answer",
-                                        "condition": "equals",
-                                        "value": "Yes"
-                                    }, {
-                                        "id": "working-days-answer",
-                                        "condition": "contains",
-                                        "value": "Did not work this week"
-                                    }]
+                                            "id": "second-job-answer",
+                                            "condition": "equals",
+                                            "value": "Yes"
+                                        },
+                                        {
+                                            "id": "working-days-answer",
+                                            "condition": "contains",
+                                            "value": "Did not work this week"
+                                        }
+                                    ]
                                 }
                             },
                             {
                                 "goto": {
                                     "block": "two-jobs-j1-usual-hours-w12-1",
                                     "when": [{
-                                        "id": "second-job-answer",
-                                        "condition": "equals",
-                                        "value": "Yes"
-                                    }, {
-                                        "id": "working-days-answer",
-                                        "condition": "not set"
-                                    }]
+                                            "id": "second-job-answer",
+                                            "condition": "equals",
+                                            "value": "Yes"
+                                        },
+                                        {
+                                            "id": "working-days-answer",
+                                            "condition": "not set"
+                                        }
+                                    ]
                                 }
                             },
                             {
@@ -4050,14 +4104,16 @@
                                 "goto": {
                                     "block": "two-jobs-j1-unpaid-overtime-w-10-1",
                                     "when": [{
-                                        "id": "second-job-answer",
-                                        "condition": "equals",
-                                        "value": "Yes"
-                                    }, {
-                                        "id": "overtime-answer",
-                                        "condition": "equals",
-                                        "value": "Unpaid overtime"
-                                    }]
+                                            "id": "second-job-answer",
+                                            "condition": "equals",
+                                            "value": "Yes"
+                                        },
+                                        {
+                                            "id": "overtime-answer",
+                                            "condition": "equals",
+                                            "value": "Unpaid overtime"
+                                        }
+                                    ]
                                 }
                             },
                             {
@@ -6089,7 +6145,8 @@
                                         "condition": "not set"
                                     }]
                                 }
-                            }, {
+                            },
+                            {
                                 "goto": {
                                     "block": "two-jobs-j2-usual-hours-w12-2",
                                     "when": [{
@@ -6272,7 +6329,8 @@
                                         }
                                     ]
                                 }
-                            }, {
+                            },
+                            {
                                 "goto": {
                                     "block": "reason-why-fewer-hours-than-usual-employee-w14-emp",
                                     "when": [{
@@ -6302,7 +6360,8 @@
                                         }
                                     ]
                                 }
-                            }, {
+                            },
+                            {
                                 "goto": {
                                     "block": "reason-why-fewer-hours-than-usual-self-employed-w14-semp",
                                     "when": [{
