@@ -301,17 +301,6 @@ def evaluate_when_rules(when_rules, schema, metadata, answer_store, group_instan
 
     return True
 
-def block_drives_multiple_groups(schema, answer_block_id):
-    occurance_count = 0
-
-    for driven_group in schema.group_dependencies:
-        if driven_group in ['group_drivers', 'block_drivers']:
-            continue
-
-        if answer_block_id in schema.group_dependencies[driven_group]:
-            occurance_count += 1
-
-    return occurance_count > 1
 
 def get_answer_store_value(answer_id, answer_store, schema, group_instance, group_instance_id=None):
     filtered = answer_store.filter(answer_ids=[answer_id])
@@ -323,7 +312,7 @@ def get_answer_store_value(answer_id, answer_store, schema, group_instance, grou
         # If all of the matching answers have a group_instance_id, then we know the answer has this group_instance_id
         group_instance = None
         answer_block_id = schema.get_block_id_for_answer_id(answer_id)
-        if not schema.answer_is_in_repeating_group(answer_id) and block_drives_multiple_groups(schema, answer_block_id):
+        if not schema.answer_is_in_repeating_group(answer_id) and schema.block_drives_multiple_groups(answer_block_id):
             group_instance_id = None
 
     else:

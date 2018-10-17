@@ -212,6 +212,18 @@ class QuestionnaireSchema:  # pylint: disable=too-many-public-methods
         question = self.get_question(answer['parent_id'])
         return answer.get('type') in ['Checkbox', 'MutuallyExclusiveCheckbox'] or question['type'] == 'RepeatingAnswer'
 
+    def block_drives_multiple_groups(self, block_id):
+        driver_count = 0
+
+        for driven_group in self.group_dependencies:
+            if driven_group in ['group_drivers', 'block_drivers']:
+                continue
+
+            if block_id in self.group_dependencies[driven_group]:
+                driver_count += 1
+
+        return driver_count > 1
+
     def answer_is_in_repeating_group(self, answer_id):
         answer = self.get_answer(answer_id)
         question = self.get_question(answer['parent_id'])
@@ -260,12 +272,9 @@ class QuestionnaireSchema:  # pylint: disable=too-many-public-methods
         return list(self._get_answers_by_id_for_question(question_id).keys())
 
     def get_block_id_for_answer_id(self, answer_id):
-        try:
-            answer = self.get_answer(answer_id)
-            question = self.get_question(answer['parent_id'])
-            block = self.get_block(question['parent_id'])
-        except KeyError:
-            return None
+        answer = self.get_answer(answer_id)
+        question = self.get_question(answer['parent_id'])
+        block = self.get_block(question['parent_id'])
 
         return block['id']
 
