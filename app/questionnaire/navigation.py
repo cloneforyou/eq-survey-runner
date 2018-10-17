@@ -200,7 +200,7 @@ class Navigation:
             # if it's been started then get the first incomplete block within that section
             location = first_incomplete
         else:
-            if completeness_state == Completeness.NOT_STARTED or last_block['type'] != 'SectionSummary':
+            if completeness_state == Completeness.NOT_STARTED or last_block['type'] not in ['SectionSummary', 'AnswerSummary']:
                 # if the section hasn't been started or it is complete but has no section summary
                 # go to the first block
                 target_group, target_block = first_group, first_block
