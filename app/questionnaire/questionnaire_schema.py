@@ -259,6 +259,16 @@ class QuestionnaireSchema:  # pylint: disable=too-many-public-methods
         """ get answer ids associated with a specific question_id """
         return list(self._get_answers_by_id_for_question(question_id).keys())
 
+    def get_block_id_for_answer_id(self, answer_id):
+        try:
+            answer = self.get_answer(answer_id)
+            question = self.get_question(answer['parent_id'])
+            block = self.get_block(question['parent_id'])
+        except KeyError:
+            return None
+
+        return block['id']
+
 
 def get_nested_schema_objects(parent_object, list_key):
     """
