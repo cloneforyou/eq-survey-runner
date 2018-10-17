@@ -282,9 +282,9 @@ def evaluate_when_rules(when_rules, schema, metadata, answer_store, group_instan
     """
 
     for when_rule in when_rules:
-        if 'id' in when_rule:
-            if group_instance > 0 and not schema.answer_is_in_repeating_group(when_rule['id']):
-                group_instance = 0
+        # if 'id' in when_rule:
+            # if group_instance > 0 and not schema.answer_is_in_repeating_group(when_rule['id']):
+            #     group_instance = 0
 
         value = _get_when_rule_value(when_rule, group_instance, answer_store, schema, metadata, group_instance_id)
 
@@ -313,9 +313,9 @@ def get_answer_store_value(answer_id, answer_store, schema, group_instance, grou
         group_instance = None
     else:
         # We don't have group_instance_ids everywhere, so filter on the group_instance
-        if group_instance > 0 and not schema.answer_is_in_repeating_group(answer_id):
-            # If we're comparing to answer outside repeating group we may have an incorrect group_instance
-            group_instance = 0
+        # if group_instance > 0 and not schema.answer_is_in_repeating_group(answer_id):
+        #     # If we're comparing to answer outside repeating group we may have an incorrect group_instance
+        #     group_instance = 0
 
         group_instance_id = None
 

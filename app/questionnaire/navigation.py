@@ -3,7 +3,7 @@ from structlog import get_logger
 from app.helpers.schema_helpers import get_group_instance_id
 from app.questionnaire.completeness import Completeness
 from app.questionnaire.location import Location
-from app.questionnaire.rules import evaluate_repeat
+from app.questionnaire.rules import evaluate_repeat, get_number_of_repeats
 
 logger = get_logger()
 
@@ -43,7 +43,7 @@ class Navigation:
         navigation = []
 
         for section in self.schema.sections:
-            non_skipped_groups = self._get_non_skipped_groups(section)
+            non_skipped_groups = self._get_non_skipped_groups_and_instance(section, current_group_instance)
             if not non_skipped_groups:
                 continue
 
@@ -65,18 +65,28 @@ class Navigation:
 
         return navigation
 
-    def _get_non_skipped_groups(self, section):
-        return [
-            group for group in section['groups']
-            if self.completeness.get_state_for_group(group) != Completeness.SKIPPED
-        ]
+    def _get_non_skipped_groups_and_instance(self, section, group_instance):
+        non_skipped_groups = []
+        instances = []
+        for group in section['groups']:
+            no_of_repeats = get_number_of_repeats(group, self.schema, self.routing_path, self.answer_store)
+            for i in range(no_of_repeats):
+                if self.completeness.get_state_for_group(group, i) != Completeness.SKIPPED:
+                    non_skipped_groups.append(group)
+                    instances.append(i)
+        return non_skipped_groups
 
     def _build_single_navigation(self, section, current_group_id, first_location):
         group_ids = (group['id'] for group in section['groups'])
         is_highlighted = current_group_id in group_ids
         is_completed = self.completeness.is_section_complete(section)
 
-        return self._generate_item(section['title'], is_completed, first_location, is_highlighted)
+        try:
+            title = self._generate_item(section['title'], is_completed, first_location, is_highlighted)
+        except Exception:
+            title = None
+
+        return title
 
     def _build_repeating_navigation(self, repeating_rule, section, current_group_id, current_group_instance):
         groups = section['groups']

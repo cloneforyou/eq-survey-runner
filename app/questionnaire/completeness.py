@@ -25,7 +25,7 @@ class Completeness:
     def is_section_complete(self, section):
         return self.get_state_for_section(section) == self.COMPLETED
 
-    def is_group_complete(self, group, group_instance=None):
+    def is_group_complete(self, group, group_instance):
         return self.get_state_for_group(group, group_instance=group_instance) == self.COMPLETED
 
     def is_block_complete(self, location):
@@ -42,9 +42,12 @@ class Completeness:
             # lookup section by section ID
             section = self.schema.get_section(section)
 
-        group_states = [
-            self.get_state_for_group(group) for group in section['groups']
-        ]
+        group_states = []
+        for group in section['groups']:
+            no_of_repeats = get_number_of_repeats(group, self.schema, self.routing_path, self.answer_store)
+            for i in range(no_of_repeats):
+                group_state = self.get_state_for_group(group, i)
+                group_states.append(group_state)
 
         def eval_state(state_to_compare):
             return (state == state_to_compare for state in group_states)
@@ -66,7 +69,7 @@ class Completeness:
 
         return section_state
 
-    def get_state_for_group(self, group, group_instance=None):
+    def get_state_for_group(self, group, group_instance):
         if isinstance(group, str):
             # lookup group by group ID
             group = self.schema.get_group(group)
@@ -78,7 +81,7 @@ class Completeness:
             # show as complete
             return self.NOT_STARTED if self.all_sections_complete() else self.SKIPPED
 
-        if self._should_skip(group):
+        if self._should_skip(group, group_instance):
             return self.SKIPPED
 
         block_states = [
@@ -117,13 +120,13 @@ class Completeness:
 
     def get_first_incomplete_location_in_section(self, section):
         incomplete_locations = (
-            self.get_first_incomplete_location_in_group(group)
+            self.get_first_incomplete_location_in_group(group, 0)
             for group in section['groups']
         )
         return next(filter(None, incomplete_locations), None)
 
-    def get_first_incomplete_location_in_group(self, group, group_instance=None):
-        if self._should_skip(group):
+    def get_first_incomplete_location_in_group(self, group, group_instance):
+        if self._should_skip(group, group_instance):
             return
 
         incomplete_locations = (
@@ -134,8 +137,8 @@ class Completeness:
         )
         return next(incomplete_locations, None)
 
-    def _get_block_states_for_group(self, group, group_instance=None):
-        if group_instance is not None:
+    def _get_block_states_for_group(self, group, group_instance):
+        if group_instance is not 0:
             start_instance = max_instance = group_instance
         else:
             max_instance = get_number_of_repeats(group, self.schema, self.routing_path, self.answer_store) - 1
@@ -145,7 +148,7 @@ class Completeness:
             for block in group['blocks']:
                 location = Location(group['id'], current_instance, block['id'])
 
-                if self._should_skip(block):
+                if self._should_skip(block, group_instance):
                     state = self.SKIPPED
                 elif self._is_valid_for_completeness(block, location):
                     state = self.COMPLETED if self.is_block_complete(location) else self.NOT_STARTED
@@ -169,10 +172,13 @@ class Completeness:
                 QuestionnaireSchema.is_confirmation_section(section))
         )
 
-    def _should_skip(self, group_or_block):
+    def _should_skip(self, group_or_block, group_instance):
+        if group_or_block['id'] == 'household-member-group':
+            listen_up = True
+
         return (
             'skip_conditions' in group_or_block and
-            evaluate_skip_conditions(group_or_block['skip_conditions'], self.schema, self.metadata, self.answer_store)
+            evaluate_skip_conditions(group_or_block['skip_conditions'], self.schema, self.metadata, self.answer_store, group_instance)
         )
 
     def _is_valid_for_completeness(self, block, location):
