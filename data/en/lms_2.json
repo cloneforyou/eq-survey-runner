@@ -3781,11 +3781,12 @@
                                     "value": "These are specific working arrangements that only apply to some people. Do you have any of the following?"
                                 }
                             ],
-                            "type": "General",
+                            "type": "MutuallyExclusive",
+                            "mandatory": false,
                             "answers": [{
                                     "id": "working-hours-answer",
                                     "mandatory": false,
-                                    "type": "MutuallyExclusiveCheckbox",
+                                    "type": "Checkbox",
                                     "options": [{
                                             "label": "Flexi-time",
                                             "value": "Flexi-time"
@@ -3822,10 +3823,6 @@
                                             "label": "Some other arrangement",
                                             "value": "Some other arrangement",
                                             "child_answer_id": "working-hours-answer-other"
-                                        },
-                                        {
-                                            "label": "None of these",
-                                            "value": "None of these"
                                         }
                                     ]
                                 },
@@ -3835,6 +3832,14 @@
                                     "type": "TextField",
                                     "mandatory": false,
                                     "label": "Please describe"
+                                }, {
+                                    "id": "working-hours-answer-exclusive",
+                                    "mandatory": false,
+                                    "type": "Checkbox",
+                                    "options": [{
+                                        "label": "None of these",
+                                        "value": "None of these"
+                                    }]
                                 }
                             ]
                         }],
@@ -3895,11 +3900,12 @@
                                     "value": "On which of the following days did you do any work in your paid job or business?"
                                 }
                             ],
-                            "type": "General",
+                            "type": "MutuallyExclusive",
+                            "mandatory": false,
                             "answers": [{
                                 "id": "working-days-answer",
                                 "mandatory": false,
-                                "type": "MutuallyExclusiveCheckbox",
+                                "type": "Checkbox",
                                 "options": [{
                                         "label": "{{calculate_offset_from_weekday_in_last_whole_week(collection_metadata['started_at'], {}, 'MO') | format_date_custom('EEEE dd MMMM') }}",
                                         "value": "Monday"
@@ -3927,12 +3933,16 @@
                                     {
                                         "label": "{{calculate_offset_from_weekday_in_last_whole_week(collection_metadata['started_at'], {}, 'SU') | format_date_custom('EEEE dd MMMM') }}",
                                         "value": "Sunday"
-                                    },
-                                    {
-                                        "label": "Did not work this week",
-                                        "value": "Did not work this week"
                                     }
                                 ]
+                            }, {
+                                "id": "working-days-answer-exclusive",
+                                "mandatory": false,
+                                "type": "Checkbox",
+                                "options": [{
+                                    "label": "Did not work this week",
+                                    "value": "Did not work this week"
+                                }]
                             }]
                         }]
                     },
@@ -3988,6 +3998,10 @@
                                         {
                                             "id": "working-days-answer",
                                             "condition": "not set"
+                                        },
+                                        {
+                                            "id": "working-days-answer-exclusive",
+                                            "condition": "not set"
                                         }
                                     ]
                                 }
@@ -4001,7 +4015,7 @@
                                             "value": "Yes"
                                         },
                                         {
-                                            "id": "working-days-answer",
+                                            "id": "working-days-answer-exclusive",
                                             "condition": "contains",
                                             "value": "Did not work this week"
                                         }
@@ -4081,7 +4095,7 @@
                                             "value": "No"
                                         },
                                         {
-                                            "id": "working-days-answer",
+                                            "id": "working-days-answer-exclusive",
                                             "condition": "contains",
                                             "value": "Did not work this week"
                                         }
@@ -4099,39 +4113,42 @@
                                         {
                                             "id": "working-days-answer",
                                             "condition": "not set"
-                                        }
-                                    ]
-                                }
-                            },
-                            {
-                                "goto": {
-                                    "block": "two-jobs-j1-usual-hours-w12-1",
-                                    "when": [{
-                                            "id": "second-job-answer",
-                                            "condition": "equals",
-                                            "value": "Yes"
                                         },
                                         {
-                                            "id": "working-days-answer",
-                                            "condition": "contains",
-                                            "value": "Did not work this week"
-                                        }
-                                    ]
-                                }
-                            },
-                            {
-                                "goto": {
-                                    "block": "two-jobs-j1-usual-hours-w12-1",
-                                    "when": [{
-                                            "id": "second-job-answer",
-                                            "condition": "equals",
-                                            "value": "Yes"
-                                        },
-                                        {
-                                            "id": "working-days-answer",
+                                            "id": "working-days-answer-exclusive",
                                             "condition": "not set"
                                         }
                                     ]
+                                }
+                            },
+                            {
+                                "goto": {
+                                    "block": "two-jobs-j1-usual-hours-w12-1",
+                                    "when": [{
+                                        "id": "second-job-answer",
+                                        "condition": "equals",
+                                        "value": "Yes"
+                                    }, {
+                                        "id": "working-days-answer-exclusive",
+                                        "condition": "contains",
+                                        "value": "Did not work this week"
+                                    }]
+                                }
+                            },
+                            {
+                                "goto": {
+                                    "block": "two-jobs-j1-usual-hours-w12-1",
+                                    "when": [{
+                                        "id": "second-job-answer",
+                                        "condition": "equals",
+                                        "value": "Yes"
+                                    }, {
+                                        "id": "working-days-answer",
+                                        "condition": "not set"
+                                    }, {
+                                        "id": "working-days-answer-exclusive",
+                                        "condition": "not set"
+                                    }]
                                 }
                             },
                             {
@@ -4470,7 +4487,7 @@
                                 "goto": {
                                     "block": "reason-why-fewer-hours-than-usual-employee-w14-emp",
                                     "when": [{
-                                            "id": "working-days-answer",
+                                            "id": "working-days-answer-exclusive",
                                             "condition": "contains",
                                             "value": "Did not work this week"
                                         },
@@ -4486,7 +4503,7 @@
                                 "goto": {
                                     "block": "reason-why-fewer-hours-than-usual-employee-w14-emp",
                                     "when": [{
-                                            "id": "working-days-answer",
+                                            "id": "working-days-answer-exclusive",
                                             "condition": "contains",
                                             "value": "Did not work this week"
                                         },
@@ -4505,7 +4522,7 @@
                                 "goto": {
                                     "block": "reason-why-fewer-hours-than-usual-employee-w14-emp",
                                     "when": [{
-                                            "id": "working-days-answer",
+                                            "id": "working-days-answer-exclusive",
                                             "condition": "contains",
                                             "value": "Did not work this week"
                                         },
@@ -4521,7 +4538,7 @@
                                 "goto": {
                                     "block": "reason-why-fewer-hours-than-usual-self-employed-w14-semp",
                                     "when": [{
-                                            "id": "working-days-answer",
+                                            "id": "working-days-answer-exclusive",
                                             "condition": "contains",
                                             "value": "Did not work this week"
                                         },
@@ -4537,7 +4554,7 @@
                                 "goto": {
                                     "block": "reason-why-fewer-hours-than-usual-self-employed-w14-semp",
                                     "when": [{
-                                            "id": "working-days-answer",
+                                            "id": "working-days-answer-exclusive",
                                             "condition": "contains",
                                             "value": "Did not work this week"
                                         },
@@ -4557,6 +4574,10 @@
                                             "condition": "not set"
                                         },
                                         {
+                                            "id": "working-days-answer-exclusive",
+                                            "condition": "not set"
+                                        },
+                                        {
                                             "id": "one-job-emp-status-emp-or-self-answer",
                                             "condition": "equals",
                                             "value": "employee"
@@ -4572,6 +4593,10 @@
                                             "condition": "not set"
                                         },
                                         {
+                                            "id": "working-days-answer-exclusive",
+                                            "condition": "not set"
+                                        },
+                                        {
                                             "id": "one-job-emp-status-emp-or-self-proxy-answer",
                                             "condition": "equals",
                                             "value": "employee"
@@ -4584,6 +4609,10 @@
                                     "block": "reason-why-fewer-hours-than-usual-employee-w14-emp",
                                     "when": [{
                                             "id": "working-days-answer",
+                                            "condition": "not set"
+                                        },
+                                        {
+                                            "id": "working-days-answer-exclusive",
                                             "condition": "not set"
                                         },
                                         {
@@ -4602,6 +4631,10 @@
                                     "block": "reason-why-fewer-hours-than-usual-self-employed-w14-semp",
                                     "when": [{
                                             "id": "working-days-answer",
+                                            "condition": "not set"
+                                        },
+                                        {
+                                            "id": "working-days-answer-exclusive",
                                             "condition": "not set"
                                         },
                                         {
@@ -4617,6 +4650,10 @@
                                     "block": "reason-why-fewer-hours-than-usual-self-employed-w14-semp",
                                     "when": [{
                                             "id": "working-days-answer",
+                                            "condition": "not set"
+                                        },
+                                        {
+                                            "id": "working-days-answer-exclusive",
                                             "condition": "not set"
                                         },
                                         {
@@ -6209,6 +6246,9 @@
                                     "when": [{
                                         "id": "working-days-answer",
                                         "condition": "not set"
+                                    }, {
+                                        "id": "working-days-answer-exclusive",
+                                        "condition": "not set"
                                     }]
                                 }
                             },
@@ -6216,7 +6256,7 @@
                                 "goto": {
                                     "block": "two-jobs-j2-usual-hours-w12-2",
                                     "when": [{
-                                        "id": "working-days-answer",
+                                        "id": "working-days-answer-exclusive",
                                         "condition": "contains",
                                         "value": "Did not work this week"
                                     }]
@@ -6376,6 +6416,9 @@
                                         {
                                             "id": "working-days-answer",
                                             "condition": "not set"
+                                        }, {
+                                            "id": "working-days-answer-exclusive",
+                                            "condition": "not set"
                                         }
                                     ]
                                 }
@@ -6389,9 +6432,9 @@
                                             "value": "employee"
                                         },
                                         {
-                                            "id": "working-days-answer",
+                                            "id": "working-days-answer-exclusive",
                                             "condition": "contains",
-                                            "value": "did not work this week"
+                                            "value": "Did not work this week"
                                         }
                                     ]
                                 }
@@ -6407,6 +6450,9 @@
                                         {
                                             "id": "working-days-answer",
                                             "condition": "not set"
+                                        }, {
+                                            "id": "working-days-answer-exclusive",
+                                            "condition": "not set"
                                         }
                                     ]
                                 }
@@ -6420,9 +6466,9 @@
                                             "value": "employee"
                                         },
                                         {
-                                            "id": "working-days-answer",
+                                            "id": "working-days-answer-exclusive",
                                             "condition": "contains",
-                                            "value": "did not work this week"
+                                            "value": "Did not work this week"
                                         }
                                     ]
                                 }
@@ -6433,6 +6479,9 @@
                                     "when": [{
                                         "id": "working-days-answer",
                                         "condition": "not set"
+                                    }, {
+                                        "id": "working-days-answer-exclusive",
+                                        "condition": "not set"
                                     }]
                                 }
                             },
@@ -6440,7 +6489,7 @@
                                 "goto": {
                                     "block": "reason-why-fewer-hours-than-usual-self-employed-w14-semp",
                                     "when": [{
-                                        "id": "working-days-answer",
+                                        "id": "working-days-answer-exclusive",
                                         "condition": "contains",
                                         "value": "Did not work this week"
                                     }]
@@ -8064,11 +8113,12 @@
                                     "value": "Did you do any unpaid or voluntary work in the week {{ format_date_range_no_repeated_month_year(calculate_offset_from_weekday_in_last_whole_week(collection_metadata['started_at'], {}) , calculate_offset_from_weekday_in_last_whole_week(collection_metadata['started_at'], {}, 'SU'), 'EEEE d MMMM YYYY') }}?"
                                 }
                             ],
-                            "type": "General",
+                            "type": "MutuallyExclusive",
+                            "mandatory": false,
                             "answers": [{
                                 "id": "unpaid-or-voluntary-work-answer",
                                 "mandatory": false,
-                                "type": "MutuallyExclusiveCheckbox",
+                                "type": "Checkbox",
                                 "options": [{
                                         "label": "Yes, for a family-owned business",
                                         "value": "Yes, for a family-owned business"
@@ -8080,12 +8130,16 @@
                                     {
                                         "label": "Yes, for an internship",
                                         "value": "Yes, for an internship"
-                                    },
-                                    {
-                                        "label": "No",
-                                        "value": "No"
                                     }
                                 ]
+                            }, {
+                                "id": "unpaid-or-voluntary-work-answer-exclusive",
+                                "mandatory": false,
+                                "type": "Checkbox",
+                                "options": [{
+                                    "label": "No",
+                                    "value": "No"
+                                }]
                             }]
                         }]
                     },
