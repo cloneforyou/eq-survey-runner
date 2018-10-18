@@ -582,11 +582,14 @@
                             "id": "primary-household-member-address-check-answer",
                             "condition": "equals",
                             "value": "No"
-                        }, {
+                        }]
+                    }, {
+                        "when": [{
                             "id": "primary-household-member-address-check-answer",
                             "condition": "not set"
                         }]
-                    }],
+                    }
+                    ],
                     "blocks": [{
                             "type": "Question",
                             "id": "share-cooking-block",
@@ -645,11 +648,14 @@
                             "id": "primary-household-member-address-check-answer",
                             "condition": "equals",
                             "value": "Yes"
-                        }, {
+                        }]
+                    }, {
+                        "when": [{
                             "id": "primary-household-member-address-check-answer",
                             "condition": "not set"
                         }]
-                    }],
+                    }
+                    ],
                     "blocks": [{
                             "type": "Question",
                             "id": "share-cooking-block-no-primary",
