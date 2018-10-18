@@ -47,8 +47,6 @@ class Navigation:
                 continue
 
             non_skipped_groups = self._get_non_skipped_groups(section)
-            if not non_skipped_groups:
-                continue
 
             target_location = self._get_location_for_section(section, non_skipped_groups)
 
