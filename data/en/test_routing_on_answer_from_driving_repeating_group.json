@@ -168,9 +168,9 @@
                             "q_code": "2",
                             "type": "Relationship",
                             "options": [{
-                                "label": "Husband or wife",
-                                "value": "Husband or wife"
-                            },
+                                    "label": "Husband or wife",
+                                    "value": "Husband or wife"
+                                },
                                 {
                                     "label": "Partner",
                                     "value": "Partner"
@@ -314,9 +314,9 @@
                             "mandatory": true,
                             "type": "Radio",
                             "options": [{
-                                "label": "Male",
-                                "value": "Male"
-                            },
+                                    "label": "Male",
+                                    "value": "Male"
+                                },
                                 {
                                     "label": "Female",
                                     "value": "Female"
