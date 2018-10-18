@@ -43,20 +43,17 @@ class Navigation:
         navigation = []
 
         for section in self.schema.sections:
-            if self.completeness.get_state_for_section(section) == self.completeness.SKIPPED:
+            navigable_groups = self._get_navigable_groups(section)
+            if not navigable_groups:
                 continue
 
-            non_skipped_groups = self._get_non_skipped_groups(section)
-            if not non_skipped_groups:
-                continue
-
-            target_location = self._get_location_for_section(section, non_skipped_groups)
+            target_location = self._get_location_for_section(section, navigable_groups)
 
             # if the first group in a section is a repeating group then repeat the section
             # navigation link for each repeat instead of rendering the section title
             repeating_rule = None
-            if len(non_skipped_groups) == 1:
-                repeating_rule = self.schema.get_repeat_rule(non_skipped_groups[0])
+            if len(navigable_groups) == 1:
+                repeating_rule = self.schema.get_repeat_rule(navigable_groups[0])
 
             if repeating_rule:
                 navigation.extend(self._build_repeating_navigation(repeating_rule, section, current_group_id,
@@ -68,10 +65,10 @@ class Navigation:
 
         return navigation
 
-    def _get_non_skipped_groups(self, section):
+    def _get_navigable_groups(self, section):
         return [
             group for group in section['groups']
-            if self.completeness.get_state_for_group(group) != Completeness.SKIPPED
+            if self.completeness.get_state_for_group(group) not in (Completeness.SKIPPED, Completeness.INVALID)
         ]
 
     def _build_single_navigation(self, section, current_group_id, first_location):
