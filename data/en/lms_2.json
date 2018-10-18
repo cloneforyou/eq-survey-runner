@@ -361,16 +361,6 @@
                                 },
                                 {
                                     "goto": {
-                                        "group": "share-group-no-primary",
-                                        "when": [{
-                                            "id": "address-type-answer-no-primary",
-                                            "condition": "equals",
-                                            "value": "Student accommodation rented through a private landlord"
-                                        }]
-                                    }
-                                },
-                                {
-                                    "goto": {
                                         "group": "household-relationships-group"
                                     }
                                 }
@@ -592,6 +582,9 @@
                             "id": "primary-household-member-address-check-answer",
                             "condition": "equals",
                             "value": "No"
+                        }, {
+                            "id": "primary-household-member-address-check-answer",
+                            "condition": "not set"
                         }]
                     }],
                     "blocks": [{
@@ -652,6 +645,9 @@
                             "id": "primary-household-member-address-check-answer",
                             "condition": "equals",
                             "value": "Yes"
+                        }, {
+                            "id": "primary-household-member-address-check-answer",
+                            "condition": "not set"
                         }]
                     }],
                     "blocks": [{
