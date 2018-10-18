@@ -43,6 +43,9 @@ class Navigation:
         navigation = []
 
         for section in self.schema.sections:
+            if self.completeness.get_state_for_section(section) == self.completeness.SKIPPED:
+                continue
+
             non_skipped_groups = self._get_non_skipped_groups(section)
             if not non_skipped_groups:
                 continue
