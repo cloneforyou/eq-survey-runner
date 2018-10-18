@@ -8,16 +8,16 @@ class SexBlockNoPrimaryPage extends QuestionPage {
   }
 
   male() {
-    return '#sex-answer-0';
+    return '#sex-answer-no-primary-0';
   }
 
-  maleLabel() { return '#label-sex-answer-0'; }
+  maleLabel() { return '#label-sex-answer-no-primary-0'; }
 
   female() {
-    return '#sex-answer-1';
+    return '#sex-answer-no-primary-1';
   }
 
-  femaleLabel() { return '#label-sex-answer-1'; }
+  femaleLabel() { return '#label-sex-answer-no-primary-1'; }
 
 }
 module.exports = new SexBlockNoPrimaryPage();

@@ -51,9 +51,9 @@ class SummaryPage extends QuestionPage {
 
   householdRelationshipsTitle(index = 0) { return '#household-relationships-' + index; }
 
-  sexAnswer(index = 0) { return '#sex-answer-' + index + '-answer'; }
+  sexAnswerNoPrimary(index = 0) { return '#sex-answer-no-primary-' + index + '-answer'; }
 
-  sexAnswerEdit(index = 0) { return '[data-qa="sex-answer-' + index + '-edit"]'; }
+  sexAnswerNoPrimaryEdit(index = 0) { return '[data-qa="sex-answer-no-primary-' + index + '-edit"]'; }
 
   sexQuestionNoPrimary(index = 0) { return '#sex-question-no-primary-' + index; }
 

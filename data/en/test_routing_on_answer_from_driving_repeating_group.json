@@ -310,7 +310,7 @@
                         "title": "What is {{ group_instances[group_instance_id]['repeating-name'] }}'s sex?",
                         "type": "General",
                         "answers": [{
-                            "id": "sex-answer",
+                            "id": "sex-answer-no-primary",
                             "mandatory": true,
                             "type": "Radio",
                             "options": [{
