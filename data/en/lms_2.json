@@ -732,7 +732,8 @@
                         "id": "no-primary-household-relationships-block",
                         "questions": [{
                             "id": "no-primary-relationship-question",
-                            "title": "How is <em>Person</em> related to the people below?",
+                            "title": "How is <em>{{[group_instances[group_instance_id]['primary-household-member-first-name'], group_instances[group_instance_id]['primary-household-member-last-name'], group_instances[group_instance_id]['other-household-member-first-name'], group_instances[group_instance_id]['other-household-member-last-name'], group_instances[group_instance_id]['student-household-member-first-name'], group_instances[group_instance_id]['student-household-member-last-name'], group_instances[group_instance_id]['other-household-member-first-name-no-primary'], group_instances[group_instance_id]['other-household-member-last-name-no-primary'], group_instances[group_instance_id]['student-household-member-first-name-no-primary'], group_instances[group_instance_id]['student-household-member-last-name-no-primary']] | format_household_name}}</em> related to the people below?",
+
                             "type": "Relationship",
                             "member_label": "answers['primary-household-member-first-name'] | default(answers['other-household-member-first-name']) | default(answers['student-household-member-first-name']) | default(answers['other-household-member-first-name-no-primary']) | default(answers['student-household-member-first-name-no-primary'])",
                             "answers": [{
