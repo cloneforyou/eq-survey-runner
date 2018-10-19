@@ -9490,7 +9490,7 @@
                                     "value": "now"
                                 },
                                 "minimum": {
-                                    "answer_id": "date-of-birth-answer"
+                                    "answer_id": "no-primary-date-of-birth-answer"
                                 }
                             }]
                         }],
@@ -9516,7 +9516,7 @@
                         "questions": [{
                             "id": "no-primary-continuous-in-uk-question",
                             "titles": [{
-                                    "value": "Apart from holidays and short visits abroad, has <em>{{[ group_instances[group_instance_id]['other-household-member-first-name-no-primary'], group_instances[group_instance_id]['other-household-member-last-name-no-primary'], group_instances[group_instance_id]['student-household-member-first-name-no-primary'], group_instances[group_instance_id]['student-household-member-last-name-no-primary']] | format_household_name}}</em> lived in the UK continuously since {{ answers['first-arrive-in-uk-answer'][group_instance]|format_date }}?",
+                                    "value": "Apart from holidays and short visits abroad, has <em>{{[ group_instances[group_instance_id]['other-household-member-first-name-no-primary'], group_instances[group_instance_id]['other-household-member-last-name-no-primary'], group_instances[group_instance_id]['student-household-member-first-name-no-primary'], group_instances[group_instance_id]['student-household-member-last-name-no-primary']] | format_household_name}}</em> lived in the UK continuously since {{ answers['no-primary-first-arrive-in-uk-answer'][group_instance]|format_date }}?",
                                     "when": [{
                                         "id": "no-primary-proxy-check-answer",
                                         "condition": "equals",
@@ -9524,7 +9524,7 @@
                                     }]
                                 },
                                 {
-                                    "value": "Apart from holidays and short visits abroad, have you lived in the UK continuously since {{ answers['first-arrive-in-uk-answer'][group_instance]|format_date }}?"
+                                    "value": "Apart from holidays and short visits abroad, have you lived in the UK continuously since {{ answers['no-primary-first-arrive-in-uk-answer'][group_instance]|format_date }}?"
                                 }
                             ],
                             "type": "General",
@@ -9679,7 +9679,7 @@
                                     "value": "now"
                                 },
                                 "minimum": {
-                                    "answer_id": "first-arrive-in-uk-answer"
+                                    "answer_id": "no-primary-first-arrive-in-uk-answer"
                                 }
                             }]
                         }],
@@ -9758,7 +9758,7 @@
                         "questions": [{
                             "id": "no-primary-why-uk-question",
                             "titles": [{
-                                    "value": "What was <em>{{ [answers['primary-household-member-first-name'][group_instance], answers['primary-household-member-last-name'][group_instance]] | format_household_name_possessive}}</em> main reason for coming to the UK in {{ answers['first-arrive-in-uk-answer'][group_instance]|format_date }} ?",
+                                    "value": "What was <em>{{ [answers['primary-household-member-first-name'][group_instance], answers['primary-household-member-last-name'][group_instance]] | format_household_name_possessive}}</em> main reason for coming to the UK in {{ answers['no-primary-first-arrive-in-uk-answer'][group_instance]|format_date }} ?",
                                     "when": [{
                                         "id": "no-primary-proxy-check-answer",
                                         "condition": "equals",
@@ -9766,7 +9766,7 @@
                                     }]
                                 },
                                 {
-                                    "value": "What was your main reason for coming to the UK in {{ answers['first-arrive-in-uk-answer'][group_instance]|format_date }}?"
+                                    "value": "What was your main reason for coming to the UK in {{ answers['no-primary-first-arrive-in-uk-answer'][group_instance]|format_date }}?"
                                 }
                             ],
                             "type": "General",
@@ -9830,7 +9830,7 @@
                         "questions": [{
                             "id": "no-primary-why-uk-continuous-question",
                             "titles": [{
-                                    "value": "What was <em>{{[ group_instances[group_instance_id]['other-household-member-first-name-no-primary'], group_instances[group_instance_id]['other-household-member-last-name-no-primary'], group_instances[group_instance_id]['student-household-member-first-name-no-primary'], group_instances[group_instance_id]['student-household-member-last-name-no-primary']] | format_household_name_possessive}}</em> main reason for coming to the UK in {{ answers['last-arrive-in-uk-answer'][group_instance]|format_date }}?",
+                                    "value": "What was <em>{{[ group_instances[group_instance_id]['other-household-member-first-name-no-primary'], group_instances[group_instance_id]['other-household-member-last-name-no-primary'], group_instances[group_instance_id]['student-household-member-first-name-no-primary'], group_instances[group_instance_id]['student-household-member-last-name-no-primary']] | format_household_name_possessive}}</em> main reason for coming to the UK in {{ answers['no-primary-last-arrive-in-uk-answer'][group_instance]|format_date }}?",
                                     "when": [{
                                         "id": "no-primary-proxy-check-answer",
                                         "condition": "equals",
@@ -9838,7 +9838,7 @@
                                     }]
                                 },
                                 {
-                                    "value": "What was your main reason for coming to the UK in {{ answers['last-arrive-in-uk-answer'][group_instance]|format_date }}?"
+                                    "value": "What was your main reason for coming to the UK in {{ answers['no-primary-last-arrive-in-uk-answer'][group_instance]|format_date }}?"
                                 }
                             ],
                             "type": "General",
