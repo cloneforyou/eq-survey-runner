@@ -166,13 +166,13 @@
                                 "type": "General",
                                 "answers": [{
                                         "id": "other-household-member-first-name",
-                                        "label": "First Name",
+                                        "label": "First or given name",
                                         "mandatory": true,
                                         "type": "TextField"
                                     },
                                     {
                                         "id": "other-household-member-last-name",
-                                        "label": "Last Name",
+                                        "label": "Surname or family name",
                                         "mandatory": true,
                                         "type": "TextField"
                                     }
@@ -242,13 +242,13 @@
                                 "type": "General",
                                 "answers": [{
                                         "id": "student-household-member-first-name",
-                                        "label": "First Name",
+                                        "label": "First or given name",
                                         "mandatory": true,
                                         "type": "TextField"
                                     },
                                     {
                                         "id": "student-household-member-last-name",
-                                        "label": "Last Name",
+                                        "label": "Surname or family name",
                                         "mandatory": true,
                                         "type": "TextField"
                                     }
