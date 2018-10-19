@@ -12376,7 +12376,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "less than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -12397,7 +12397,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "less than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -12421,7 +12421,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "less than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -12442,7 +12442,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "equals",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -12463,7 +12463,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "equals",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -12487,7 +12487,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "equals",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -12508,7 +12508,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "greater than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -12529,7 +12529,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "greater than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -12553,7 +12553,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "greater than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -12574,7 +12574,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "less than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -12595,7 +12595,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "less than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -12616,7 +12616,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "equals",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -12637,7 +12637,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "equals",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -12658,7 +12658,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "greater than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -12679,7 +12679,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "greater than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -12700,7 +12700,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "less than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -12720,7 +12720,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "less than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -12743,7 +12743,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "less than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -12763,7 +12763,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "equals",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -12783,7 +12783,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "equals",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -12806,7 +12806,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "equals",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -12826,7 +12826,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "greater than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -12846,7 +12846,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "greater than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -12869,7 +12869,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "greater than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -12889,7 +12889,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "less than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -12909,7 +12909,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "less than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -12929,7 +12929,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "equals",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -12949,7 +12949,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "equals",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -12969,7 +12969,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "greater than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -12989,7 +12989,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "greater than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -13069,7 +13069,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "less than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -13090,7 +13090,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "less than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -13114,7 +13114,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "less than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -13135,7 +13135,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "equals",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -13156,7 +13156,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "equals",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -13180,7 +13180,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "equals",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -13201,7 +13201,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "greater than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -13222,7 +13222,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "greater than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -13246,7 +13246,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "greater than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -13267,7 +13267,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "less than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -13288,7 +13288,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "less than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -13309,7 +13309,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "equals",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -13330,7 +13330,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "equals",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -13351,7 +13351,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "greater than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -13372,7 +13372,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "greater than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -13393,7 +13393,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "less than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -13413,7 +13413,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "less than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -13436,7 +13436,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "less than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -13456,7 +13456,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "equals",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -13476,7 +13476,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "equals",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -13499,7 +13499,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "equals",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -13519,7 +13519,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "greater than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -13539,7 +13539,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "greater than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -13562,7 +13562,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "greater than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -13582,7 +13582,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "less than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -13602,7 +13602,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "less than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -13622,7 +13622,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "equals",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -13642,7 +13642,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "equals",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -13662,7 +13662,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "greater than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -13682,7 +13682,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "greater than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         },
                                         {
                                             "id": "no-primary-overtime-answer",
@@ -14327,7 +14327,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "less than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         }
                                     ]
                                 }
@@ -14343,7 +14343,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "less than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         }
                                     ]
                                 }
@@ -14362,7 +14362,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "less than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         }
                                     ]
                                 }
@@ -14378,7 +14378,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "equals",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         }
                                     ]
                                 }
@@ -14394,7 +14394,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "equals",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         }
                                     ]
                                 }
@@ -14413,7 +14413,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "equals",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         }
                                     ]
                                 }
@@ -14429,7 +14429,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "greater than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         }
                                     ]
                                 }
@@ -14445,7 +14445,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "greater than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         }
                                     ]
                                 }
@@ -14464,7 +14464,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "greater than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         }
                                     ]
                                 }
@@ -14480,7 +14480,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "less than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         }
                                     ]
                                 }
@@ -14496,7 +14496,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "less than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         }
                                     ]
                                 }
@@ -14512,7 +14512,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "equals",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         }
                                     ]
                                 }
@@ -14528,7 +14528,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "equals",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         }
                                     ]
                                 }
@@ -14544,7 +14544,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "greater than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         }
                                     ]
                                 }
@@ -14560,7 +14560,7 @@
                                         {
                                             "id": "no-primary-one-job-usual-hours-answer",
                                             "condition": "greater than",
-                                            "comparison_id": "one-job-actual-hours-answer"
+                                            "comparison_id": "no-primary-one-job-actual-hours-answer"
                                         }
                                     ]
                                 }
@@ -14612,7 +14612,7 @@
                                         {
                                             "id": "no-primary-two-jobs-j1-actual-hours-answer",
                                             "condition": "greater than",
-                                            "comparison_id": "two-jobs-j1-usual-hours-answer"
+                                            "comparison_id": "no-primary-two-jobs-j1-usual-hours-answer"
                                         }
                                     ]
                                 }
@@ -14628,7 +14628,7 @@
                                         {
                                             "id": "no-primary-two-jobs-j1-actual-hours-answer",
                                             "condition": "greater than",
-                                            "comparison_id": "two-jobs-j1-usual-hours-answer"
+                                            "comparison_id": "no-primary-two-jobs-j1-usual-hours-answer"
                                         }
                                     ]
                                 }
@@ -14647,7 +14647,7 @@
                                         {
                                             "id": "no-primary-two-jobs-j1-actual-hours-answer",
                                             "condition": "greater than",
-                                            "comparison_id": "two-jobs-j1-usual-hours-answer"
+                                            "comparison_id": "no-primary-two-jobs-j1-usual-hours-answer"
                                         }
                                     ]
                                 }
@@ -14663,7 +14663,7 @@
                                         {
                                             "id": "no-primary-two-jobs-j1-actual-hours-answer",
                                             "condition": "equals",
-                                            "comparison_id": "two-jobs-j1-usual-hours-answer"
+                                            "comparison_id": "no-primary-two-jobs-j1-usual-hours-answer"
                                         }
                                     ]
                                 }
@@ -14679,7 +14679,7 @@
                                         {
                                             "id": "no-primary-two-jobs-j1-actual-hours-answer",
                                             "condition": "equals",
-                                            "comparison_id": "two-jobs-j1-usual-hours-answer"
+                                            "comparison_id": "no-primary-two-jobs-j1-usual-hours-answer"
                                         }
                                     ]
                                 }
@@ -14698,7 +14698,7 @@
                                         {
                                             "id": "no-primary-two-jobs-j1-actual-hours-answer",
                                             "condition": "equals",
-                                            "comparison_id": "two-jobs-j1-usual-hours-answer"
+                                            "comparison_id": "no-primary-two-jobs-j1-usual-hours-answer"
                                         }
                                     ]
                                 }
@@ -14714,7 +14714,7 @@
                                         {
                                             "id": "no-primary-two-jobs-j1-actual-hours-answer",
                                             "condition": "less than",
-                                            "comparison_id": "two-jobs-j1-usual-hours-answer"
+                                            "comparison_id": "no-primary-two-jobs-j1-usual-hours-answer"
                                         }
                                     ]
                                 }
@@ -14730,7 +14730,7 @@
                                         {
                                             "id": "no-primary-two-jobs-j1-actual-hours-answer",
                                             "condition": "less than",
-                                            "comparison_id": "two-jobs-j1-usual-hours-answer"
+                                            "comparison_id": "no-primary-two-jobs-j1-usual-hours-answer"
                                         }
                                     ]
                                 }
@@ -14749,7 +14749,7 @@
                                         {
                                             "id": "no-primary-two-jobs-j1-actual-hours-answer",
                                             "condition": "less than",
-                                            "comparison_id": "two-jobs-j1-usual-hours-answer"
+                                            "comparison_id": "no-primary-two-jobs-j1-usual-hours-answer"
                                         }
                                     ]
                                 }
@@ -14765,7 +14765,7 @@
                                         {
                                             "id": "no-primary-two-jobs-j1-actual-hours-answer",
                                             "condition": "greater than",
-                                            "comparison_id": "two-jobs-j1-usual-hours-answer"
+                                            "comparison_id": "no-primary-two-jobs-j1-usual-hours-answer"
                                         }
                                     ]
                                 }
@@ -14781,7 +14781,7 @@
                                         {
                                             "id": "no-primary-two-jobs-j1-actual-hours-answer",
                                             "condition": "greater than",
-                                            "comparison_id": "two-jobs-j1-usual-hours-answer"
+                                            "comparison_id": "no-primary-two-jobs-j1-usual-hours-answer"
                                         }
                                     ]
                                 }
@@ -14797,7 +14797,7 @@
                                         {
                                             "id": "no-primary-two-jobs-j1-actual-hours-answer",
                                             "condition": "equals",
-                                            "comparison_id": "two-jobs-j1-usual-hours-answer"
+                                            "comparison_id": "no-primary-two-jobs-j1-usual-hours-answer"
                                         }
                                     ]
                                 }
@@ -14811,7 +14811,7 @@
                                             "value": "Self-employed"
                                         },
                                         {
-                                            "comparison_id": "two-jobs-j1-usual-hours-answer",
+                                            "comparison_id": "no-primary-two-jobs-j1-usual-hours-answer",
                                             "condition": "equals",
                                             "id": "no-primary-two-jobs-j1-actual-hours-answer"
                                         }
@@ -14829,7 +14829,7 @@
                                         {
                                             "id": "no-primary-two-jobs-j1-actual-hours-answer",
                                             "condition": "less than",
-                                            "comparison_id": "two-jobs-j1-usual-hours-answer"
+                                            "comparison_id": "no-primary-two-jobs-j1-usual-hours-answer"
                                         }
                                     ]
                                 }
@@ -14845,7 +14845,7 @@
                                         {
                                             "id": "no-primary-two-jobs-j1-actual-hours-answer",
                                             "condition": "less than",
-                                            "comparison_id": "two-jobs-j1-usual-hours-answer"
+                                            "comparison_id": "no-primary-two-jobs-j1-usual-hours-answer"
                                         }
                                     ]
                                 }
