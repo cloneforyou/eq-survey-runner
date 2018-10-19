@@ -214,7 +214,7 @@
                             "questions": [{
                                 "type": "General",
                                 "id": "student-household-member-anyone-else-question",
-                                "title": "Apart from anyone already added, is there anyone you need to add who lives in a student halls of residence for part of the year?",
+                                "title": "Apart from anyone already added, is there anyone you need to add, including people who live in a student halls of residence?",
                                 "description": "{{ [[answers['primary-household-member-first-name'], answers['primary-household-member-last-name']], [answers['other-household-member-first-name'], answers['other-household-member-last-name']], [answers['student-household-member-first-name'], answers['student-household-member-last-name']]] | format_repeating_summary }}",
                                 "answers": [{
                                     "type": "Radio",
@@ -472,7 +472,7 @@
                             "questions": [{
                                 "type": "General",
                                 "id": "student-household-member-anyone-else-question-no-primary",
-                                "title": "Apart from anyone already added, is there anyone you need to add who lives in a student halls of residence for part of the year?",
+                                "title": "Apart from anyone already added, is there anyone you need to add, including people who live in a student halls of residence?",
                                 "description": "{{ [[answers['other-household-member-first-name-no-primary'], answers['other-household-member-last-name-no-primary']], [answers['student-household-member-first-name-no-primary'], answers['student-household-member-last-name-no-primary']]] | format_repeating_summary }}",
                                 "answers": [{
                                     "type": "Radio",
