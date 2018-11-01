@@ -345,8 +345,8 @@ def long_names_required(question, num_questions):
         return True
     else:
         num_answers = len(question['answers'])
-        if num_answers == 2 and 'other' in question['answers'][1]['id']:
-            num_answers = 1
+        # if num_answers == 2 and 'other' in question['answers'][1]['id']:
+        #     num_answers = 1
 
         if num_answers > 1:
             return True

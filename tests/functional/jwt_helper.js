@@ -49,7 +49,14 @@ module.exports = function generateToken(schema, userId, collectionId, periodId =
     region_code: regionCode,
     language_code: languageCode,
     sexual_identity: sexualIdentity,
-    account_service_url: 'http://localhost:8000'
+    account_service_url: 'http://localhost:8000',
+    country: 'E',
+    display_address: '51 Jons Street, Bristol',
+    address_line1: '51 Jons Street',
+    address_line2: '',
+    locality: '',
+    town_name: 'Bristol',
+    postcode: ''
   };
 
   // Sign JWT, password=616161
