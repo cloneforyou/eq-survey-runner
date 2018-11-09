@@ -9,12 +9,12 @@ class TestQuestionnaireChangeAnswer(IntegrationTestCase):
         self.launchSurvey('test', 'dates')
 
         post_data = {
-            'date-range-from-day': '1',
-            'date-range-from-month': '1',
-            'date-range-from-year': '2017',
-            'date-range-to-day': '2',
-            'date-range-to-month': '1',
-            'date-range-to-year': '2017',
+            'date-range-from-answer-day': '1',
+            'date-range-from-answer-month': '1',
+            'date-range-from-answer-year': '2017',
+            'date-range-to-answer-day': '2',
+            'date-range-to-answer-month': '1',
+            'date-range-to-answer-year': '2017',
             'month-year-answer-month': '1',
             'month-year-answer-year': '2016',
             'single-date-answer-day': '1',
@@ -29,21 +29,21 @@ class TestQuestionnaireChangeAnswer(IntegrationTestCase):
         }
 
         self.post(post_data)
-        self.assertInPage('Application of min and max filters to dates')
+        self.assertInBody('Application of min and max filters to dates')
         self.post(action='save_continue')
-        self.assertInPage('22 February 2099')
-        self.assertNotInPage('No answer provided')
+        self.assertInBody('22 February 2099')
+        self.assertNotInBody('No answer provided')
 
         # When we change the non-mandatory date from answered to not answered
         self.get('questionnaire/test/dates/789/dates/0/date-block')
 
         post_data = {
-            'date-range-from-day': '1',
-            'date-range-from-month': '1',
-            'date-range-from-year': '2017',
-            'date-range-to-day': '2',
-            'date-range-to-month': '1',
-            'date-range-to-year': '2017',
+            'date-range-from-answer-day': '1',
+            'date-range-from-answer-month': '1',
+            'date-range-from-answer-year': '2017',
+            'date-range-to-answer-day': '2',
+            'date-range-to-answer-month': '1',
+            'date-range-to-answer-year': '2017',
             'month-year-answer-month': '1',
             'month-year-answer-year': '2016',
             'single-date-answer-day': '1',
@@ -59,5 +59,5 @@ class TestQuestionnaireChangeAnswer(IntegrationTestCase):
         self.post(post_data)
 
         # Then the original value is replaced with 'No answer provided' on the summary page
-        self.assertNotInPage('22 February 2099')
-        self.assertInPage('No answer provided')
+        self.assertNotInBody('22 February 2099')
+        self.assertInBody('No answer provided')
