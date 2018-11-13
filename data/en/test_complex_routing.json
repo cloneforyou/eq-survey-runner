@@ -1,0 +1,256 @@
+{
+    "eq_id": "2",
+    "form_type": "2",
+    "mime_type": "application/json/ons/eq",
+    "schema_version": "0.0.1",
+    "data_version": "0.0.2",
+    "survey_id": "2",
+    "title": "Routing Test",
+    "sections": [
+        {
+            "id": "section2",
+            "title": "",
+            "groups": [
+                {
+                    "id": "group2",
+                    "title": "",
+                    "blocks": [
+                        {
+                            "id": "block1",
+                            "type": "Question",
+                            "questions": [
+                                {
+                                    "id": "question1",
+                                    "title": "question1",
+                                    "description": "",
+                                    "type": "General",
+                                    "answers": [
+                                        {
+                                            "id": "answer1",
+                                            "mandatory": false,
+                                            "type": "Checkbox",
+                                            "label": "Answer1",
+                                            "description": "",
+                                            "options": [
+                                                {
+                                                    "label": "Yes",
+                                                    "value": "Yes"
+                                                },
+                                                {
+                                                    "label": "No",
+                                                    "value": "No"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "block2",
+                            "type": "Question",
+                            "questions": [
+                                {
+                                    "id": "question2",
+                                    "title": "question2",
+                                    "description": "",
+                                    "type": "General",
+                                    "answers": [
+                                        {
+                                            "id": "answer2",
+                                            "mandatory": false,
+                                            "type": "Checkbox",
+                                            "label": "answer2",
+                                            "description": "",
+                                            "options": [
+                                                {
+                                                    "label": "Yes",
+                                                    "value": "Yes"
+                                                },
+                                                {
+                                                    "label": "No",
+                                                    "value": "No"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "block3",
+                            "type": "Question",
+                            "questions": [
+                                {
+                                    "id": "question3",
+                                    "title": "question3",
+                                    "description": "",
+                                    "type": "General",
+                                    "answers": [
+                                        {
+                                            "id": "answer3",
+                                            "mandatory": false,
+                                            "type": "Checkbox",
+                                            "label": "answer3",
+                                            "description": "",
+                                            "options": [
+                                                {
+                                                    "label": "Yes",
+                                                    "value": "Yes"
+                                                },
+                                                {
+                                                    "label": "No",
+                                                    "value": "No"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "routing_rules": [
+                                {
+                                    "goto": {
+                                        "block": "block5",
+                                        "when": [
+                                            {
+                                                "id": "answer1",
+                                                "condition": "contains",
+                                                "value": "Yes"
+                                            },
+                                            {
+                                                "id": "answer2",
+                                                "condition": "not contains",
+                                                "value": "Yes"
+                                            },
+                                            {
+                                                "id": "answer3",
+                                                "condition": "contains",
+                                                "value": "Yes"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "goto": {
+                                        "block": "block5",
+                                        "when": [
+                                            {
+                                                "id": "answer1",
+                                                "condition": "not set"
+                                            },
+                                            {
+                                                "id": "answer2",
+                                                "condition": "not contains",
+                                                "value": "Yes"
+                                            },
+                                            {
+                                                "id": "answer3",
+                                                "condition": "contains",
+                                                "value": "Yes"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "goto": {
+                                        "block": "block4"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "id": "block4",
+                            "type": "Question",
+                            "questions": [
+                                {
+                                    "id": "question4",
+                                    "title": "False",
+                                    "description": "",
+                                    "type": "General",
+                                    "answers": [
+                                        {
+                                            "id": "answer4",
+                                            "mandatory": false,
+                                            "type": "TextField",
+                                            "label": "Wrong Location",
+                                            "description": ""
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "block5",
+                            "type": "Question",
+                            "questions": [
+                                {
+                                    "id": "question5",
+                                    "title": "True",
+                                    "description": "",
+                                    "type": "General",
+                                    "answers": [
+                                        {
+                                            "id": "answer5",
+                                            "mandatory": false,
+                                            "type": "TextField",
+                                            "label": "Correct Location",
+                                            "description": ""
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "confirmation-group",
+                    "title": "confirmation",
+                    "blocks": [
+                        {
+                            "title": "You are now ready to submit this survey",
+                            "type": "Confirmation",
+                            "id": "confirmation",
+                            "description": "",
+                            "questions": [
+                                {
+                                    "id": "ready-to-submit-completed-question",
+                                    "title": "Submission",
+                                    "type": "Content",
+                                    "guidance": {
+                                        "content": [
+                                            {
+                                                "list": [
+                                                    "You will not be able to access or change your answers on submitting the questionnaire",
+                                                    "If you wish to review your answers please select the relevant completed sections"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "theme": "default",
+    "legal_basis": "StatisticsOfTradeAct",
+    "navigation": {
+        "visible": false
+    },
+    "metadata": [
+        {
+            "name": "user_id",
+            "validator": "string"
+        },
+        {
+            "name": "period_id",
+            "validator": "string"
+        },
+        {
+            "name": "ru_name",
+            "validator": "string"
+        }
+    ]
+}
