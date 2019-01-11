@@ -3210,72 +3210,68 @@
             "groups": [{
                 "id": "group613",
                 "title": "Co-operation on Innovation",
-                "skip_conditions": [
-                    {
-                        "when": [
-                            {
-                                "id": "answer3206",
-                                "condition": "not set"
-                            },
-                            {
-                                "id": "answer3217",
-                                "condition": "not set"
-                            },
-                            {
-                                "id": "answer3164",
-                                "condition": "not equals",
-                                "value": "Yes"
-                            },
-                            {
-                                "id": "answer3170",
-                                "condition": "not equals",
-                                "value": "Yes"
-                            },
-                            {
-                                "id": "answer3179",
-                                "condition": "not equals",
-                                "value": "Yes"
-                            },
-                            {
-                                "id": "answer3182",
-                                "condition": "not equals",
-                                "value": "Yes"
-                            },
-                            {
-                                "id": "answer3184",
-                                "condition": "not equals",
-                                "value": "Yes"
-                            },
-                            {
-                                "id": "answer3186",
-                                "condition": "not equals",
-                                "value": "Yes"
-                            },
-                            {
-                                "id": "answer3188",
-                                "condition": "not equals",
-                                "value": "Yes"
-                            },
-                            {
-                                "id": "answer3191",
-                                "condition": "not equals",
-                                "value": "Yes"
-                            },
-                            {
-                                "id": "answer3193",
-                                "condition": "not equals",
-                                "value": "Yes"
-                            },
-                            {
-                                "id": "answer3214",
-                                "condition": "not equals",
-                                "value": "Yes"
-                            }
-                        ]
-                    }
-                ],
-                "blocks": [
-                    {
+                "skip_conditions": [{
+                    "when": [{
+                            "id": "answer3206",
+                            "condition": "not set"
+                        },
+                        {
+                            "id": "answer3217",
+                            "condition": "not set"
+                        },
+                        {
+                            "id": "answer3164",
+                            "condition": "not equals",
+                            "value": "Yes"
+                        },
+                        {
+                            "id": "answer3170",
+                            "condition": "not equals",
+                            "value": "Yes"
+                        },
+                        {
+                            "id": "answer3179",
+                            "condition": "not equals",
+                            "value": "Yes"
+                        },
+                        {
+                            "id": "answer3182",
+                            "condition": "not equals",
+                            "value": "Yes"
+                        },
+                        {
+                            "id": "answer3184",
+                            "condition": "not equals",
+                            "value": "Yes"
+                        },
+                        {
+                            "id": "answer3186",
+                            "condition": "not equals",
+                            "value": "Yes"
+                        },
+                        {
+                            "id": "answer3188",
+                            "condition": "not equals",
+                            "value": "Yes"
+                        },
+                        {
+                            "id": "answer3191",
+                            "condition": "not equals",
+                            "value": "Yes"
+                        },
+                        {
+                            "id": "answer3193",
+                            "condition": "not equals",
+                            "value": "Yes"
+                        },
+                        {
+                            "id": "answer3214",
+                            "condition": "not equals",
+                            "value": "Yes"
+                        }
+                    ]
+                }],
+                "blocks": [{
                         "type": "Interstitial",
                         "id": "cooperation-innovation-introduction",
                         "title": "Co-operation on Innovation",
